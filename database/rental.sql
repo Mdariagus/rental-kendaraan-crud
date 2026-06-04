@@ -17,6 +17,8 @@ CREATE TABLE admin (
 CREATE TABLE customer (
     id_customer INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(100) NOT NULL,
+    email VARCHAR(100) UNIQUE,
+    password VARCHAR(255),
     alamat TEXT,
     no_hp VARCHAR(15)
 );
@@ -31,7 +33,7 @@ CREATE TABLE kendaraan (
     plat_nomor VARCHAR(20) NOT NULL UNIQUE,
     tahun YEAR,
     harga_sewa DECIMAL(10,2) NOT NULL,
-    status ENUM('Tersedia', 'Disewa') DEFAULT 'Tersedia'
+    status ENUM('Tersedia','Disewa') DEFAULT 'Tersedia'
 );
 
 -- =========================
@@ -47,27 +49,122 @@ CREATE TABLE transaksi (
     tanggal_kembali DATE NOT NULL,
 
     lama_sewa INT NOT NULL,
+
     total_bayar DECIMAL(12,2) NOT NULL,
 
-    status ENUM('Aktif', 'Selesai') DEFAULT 'Aktif',
+    status ENUM(
+        'Menunggu',
+        'Disetujui',
+        'Selesai',
+        'Dibatalkan'
+    ) DEFAULT 'Menunggu',
 
-    FOREIGN KEY (id_customer)
-        REFERENCES customer(id_customer),
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
 
-    FOREIGN KEY (id_kendaraan)
+    CONSTRAINT fk_customer
+        FOREIGN KEY (id_customer)
+        REFERENCES customer(id_customer)
+        ON UPDATE CASCADE
+        ON DELETE CASCADE,
+
+    CONSTRAINT fk_kendaraan
+        FOREIGN KEY (id_kendaraan)
         REFERENCES kendaraan(id_kendaraan)
+        ON UPDATE CASCADE
+        ON DELETE CASCADE
 );
 
 -- =========================
--- DATA AWAL ADMIN
+-- DATA ADMIN
 -- =========================
 INSERT INTO admin (
     nama,
     username,
     password
-)
-VALUES (
+) VALUES (
     'Administrator',
     'admin',
     'admin123'
+);
+
+-- =========================
+-- DATA CUSTOMER
+-- =========================
+INSERT INTO customer (
+    nama,
+    email,
+    password,
+    alamat,
+    no_hp
+) VALUES
+(
+    'Made',
+    'made@gmail.com',
+    '123456',
+    'Denpasar',
+    '081234567890'
+),
+(
+    'Putra',
+    'putra@gmail.com',
+    '123456',
+    'Badung',
+    '081298765432'
+);
+
+-- =========================
+-- DATA KENDARAAN
+-- =========================
+INSERT INTO kendaraan (
+    nama_kendaraan,
+    merk,
+    plat_nomor,
+    tahun,
+    harga_sewa,
+    status
+) VALUES
+(
+    'Avanza',
+    'Toyota',
+    'DK1234AA',
+    2023,
+    350000,
+    'Tersedia'
+),
+(
+    'Xenia',
+    'Daihatsu',
+    'DK5678BB',
+    2022,
+    320000,
+    'Tersedia'
+),
+(
+    'Innova',
+    'Toyota',
+    'DK9012CC',
+    2024,
+    550000,
+    'Tersedia'
+);
+
+-- =========================
+-- DATA TRANSAKSI
+-- =========================
+INSERT INTO transaksi (
+    id_customer,
+    id_kendaraan,
+    tanggal_sewa,
+    tanggal_kembali,
+    lama_sewa,
+    total_bayar,
+    status
+) VALUES (
+    1,
+    1,
+    '2026-06-10',
+    '2026-06-12',
+    3,
+    1050000,
+    'Menunggu'
 );
