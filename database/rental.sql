@@ -87,30 +87,6 @@ INSERT INTO admin (
     'admin123'
 );
 
--- =========================
--- DATA CUSTOMER
--- =========================
-INSERT INTO customer (
-    nama,
-    email,
-    password,
-    alamat,
-    no_hp
-) VALUES
-(
-    'Made',
-    'made@gmail.com',
-    '123456',
-    'Denpasar',
-    '081234567890'
-),
-(
-    'Putra',
-    'putra@gmail.com',
-    '123456',
-    'Badung',
-    '081298765432'
-);
 
 -- =========================
 -- DATA KENDARAAN
@@ -146,25 +122,4 @@ INSERT INTO kendaraan (
     2024,
     550000,
     'Tersedia'
-);
-
--- =========================
--- DATA TRANSAKSI
--- =========================
-INSERT INTO transaksi (
-    id_customer,
-    id_kendaraan,
-    tanggal_sewa,
-    tanggal_kembali,
-    lama_sewa,
-    total_bayar,
-    status
-) VALUES (
-    1,
-    1,
-    '2026-06-10',
-    '2026-06-12',
-    3,
-    1050000,
-    'Menunggu'
 );
