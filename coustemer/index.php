@@ -50,9 +50,6 @@
 
                     </ul>
 
-                    <a href="login.php" class="btn-register">
-                        Login
-                    </a>
 
                 </div>
 
