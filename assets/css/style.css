@@ -314,6 +314,223 @@ body {
     transform: translateY(-8px);
 }
 
-
-
 /* KENDARAAN END */
+
+/* FORM SEWA START */
+
+/* FORM SEWA END */
+
+
+
+/* ===================================== */
+/* RESPONSIVE */
+/* ===================================== */
+
+/* Laptop */
+@media (max-width: 1366px) {
+
+    .navbar-coustem {
+        left: 100px;
+        right: 100px;
+    }
+
+    .hero .content h1 {
+        font-size: 50px;
+    }
+
+    .hero .content h2 {
+        font-size: 35px;
+    }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+
+    /* Navbar */
+    .navbar-coustem {
+        left: 20px;
+        right: 20px;
+        top: 15px;
+        padding: 1rem;
+        height: auto;
+    }
+
+    .navbar-coustem .Logo {
+        font-size: 14px;
+    }
+
+    .navbar-coustem .navbar-nav {
+        gap: 5px;
+    }
+
+    .navbar-coustem .navbar-nav a {
+        margin: 0;
+        padding: 8px 12px;
+        font-size: 14px;
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: 140px;
+    }
+
+    .hero .content {
+        max-width: 100%;
+    }
+
+    .hero .content h1 {
+        font-size: 42px;
+    }
+
+    .hero .content h2 {
+        font-size: 28px;
+    }
+
+    .hero .content p {
+        font-size: 15px;
+        max-width: 90%;
+    }
+
+    .hero .content .cta {
+        width: 200px;
+        height: 48px;
+    }
+
+    .imgHero img {
+        width: 100%;
+        max-width: 500px;
+        margin: 20px auto;
+    }
+
+    /* About */
+    .card-container {
+        justify-content: center;
+    }
+
+    .card,
+    .card2 {
+        flex: none;
+        width: 100%;
+        max-width: 350px;
+    }
+
+    /* Kendaraan */
+    .card-kendaraan-container {
+        justify-content: center;
+    }
+
+    .card-kendaraan {
+        flex: none;
+        width: 100%;
+        max-width: 350px;
+    }
+}
+
+/* Mobile */
+@media (max-width: 576px) {
+
+    /* Navbar */
+    .navbar-coustem {
+        flex-direction: column;
+        gap: 10px;
+        border-radius: 20px;
+        padding: 15px;
+    }
+
+    .navbar-coustem .navbar-nav {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .navbar-coustem .navbar-nav a {
+        font-size: 13px;
+        padding: 6px 10px;
+    }
+
+    /* Hero */
+    .hero {
+        padding-top: 180px;
+    }
+
+    .hero .content h1 {
+        font-size: 30px;
+    }
+
+    .hero .content h2 {
+        font-size: 20px;
+    }
+
+    .hero .content p {
+        font-size: 14px;
+    }
+
+    .hero .content .cta {
+        width: 180px;
+        height: 45px;
+        font-size: 14px;
+    }
+
+    .imgHero img {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    /* Section Title */
+    .about h2,
+    .kendaraan h2 {
+        font-size: 28px;
+    }
+
+    .about p,
+    .kendaraan p {
+        font-size: 14px;
+    }
+
+    /* About Cards */
+    .card,
+    .card2 {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .card img {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        margin: auto;
+    }
+
+    .card2 img {
+        width: 80px;
+        height: 80px;
+    }
+
+    /* Kendaraan Cards */
+    .card-kendaraan {
+        width: 100%;
+        max-width: 100%;
+        padding: 20px;
+    }
+
+    .card-kendaraan img {
+        width: 100%;
+        max-width: 220px;
+        height: auto;
+        margin: auto;
+    }
+
+    .card-kendaraan .bmw {
+        width: 100%;
+        max-width: 180px;
+        height: auto;
+        margin: auto;
+    }
+}
+
+/* Semua gambar responsive */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
