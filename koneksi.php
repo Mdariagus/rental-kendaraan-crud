@@ -1,3 +1,7 @@
 <?php 
   $koneksi = mysqli_connect ("localhost", "root", "", "db_rental");
->
+
+  if(mysqli_connect_errno()) {
+    echo "koneksi database gagal : " . mysqli_connecr_error();
+  }
+?>

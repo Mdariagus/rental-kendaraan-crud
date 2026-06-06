@@ -1,112 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>RENTAL KENDARAAN</title>
-      <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../assets/css/style.css" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- BOOTSTRAP -->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
+    rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
+    crossorigin="anonymous"> -->
+    <!-- End -->
+
+    <!-- FONT START -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <!-- FONT END -->
+    
+    <link rel="stylesheet" href="../assets/css/style.css" />
+    <title>Rental Kendaraan</title>
 </head>
 <body>
-    <!-- NAVBAR -->
-    <div class="container mt-4">
-        <nav class="navbar navbar-expand-lg custom-navbar">
-            <div class="container-fluid">
-
-                <a class="navbar-brand text-white fw-bold" href="#">
-                    RENTCAR
-                </a>
-
-                <button class="navbar-toggler bg-light"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#navbarNav">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-
-                <div class="collapse navbar-collapse"
-                    id="navbarNav">
-
-                    <ul class="navbar-nav mx-auto">
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Home</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Kendaraan</a>
-                        </li>
-
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Kontak</a>
-                        </li>
-
-                    </ul>
-
-
-                </div>
-
+    <!-- NAVBAR START -->
+    <nav class="navbar-coustem">
+        <div class="Logo">RENTAL KENDARAN</div>
+            <div class="navbar-nav">
+                <a href="#home" class="active">HOME</a>
+                <a href="#about">TENTANG</a>
+                <a href="#kendaraan">KENDARAAN</a>
+                <a href="">SEWA</a>
             </div>
+    </nav>
+    <!-- NAVBAR END -->
 
-        </nav>
-
-    </div>
-
-    <!-- HERO -->
-
-    <section class="hero container">
-
-        <h1>SEWA KENDARAAN</h1>
-
-        <h2>DENGAN MUDAH</h2>
-
-        <p>
-            Temukan berbagai pilihan kendaraan yang nyaman,
-            aman, dan siap menemani perjalanan Anda kapan saja.
-        </p>
-
-        <a href="#" class="btn-rental">
-            SEWA SEKARANG →
-        </a>
-
-        <div class="car-image">
-          <img src="../assets/img/hero.png" alt="mobil">
-        </div>
-
+    <!-- HERO SECTION START -->
+    <section class="hero" id="home">
+        <main class="content"> 
+            <h1>SEWA MOBIL</h1>
+            <h2>DENGAN SYARAT MUDAH</h2>
+            <p>Temukan berbagai pilihan kendaraan yang nyaman, terawat, <br> dan siap menemani perjalanan anda</p>
+            <a href="#" class="cta">SEWA SEKARANG ></a>
+            <div class="imgHero"><img src="../assets/img/hero.png" alt="FOTO"></div>
+        </main>
     </section>
-
-    <!-- STATISTIK -->
-
-    <section class="container stats">
-
-        <div class="row">
-
-            <div class="col-md-4 stats-box">
-                <h3>50+</h3>
-                <p>Kendaraan</p>
+    <!-- HERO SECTION END -->
+    
+    <!-- ABOUT START -->
+    <section class="about" id="about">
+        <h2>TENTANG KAMI</h2>
+        <p>Rental Mobil menyediakan kendaraan yang nyaman, aman, dan terpercaya untuk berbagai kebutuhan perjalanan</p>
+        <div class="card-container">
+            <div class="card">
+                <h2>Armada berkualitas</h2>
+                <img src="../assets/img/1car.png" alt="card-card">
+                <p>Nikmati berbagai pilihan kendaraan yang selalu dirawat secara berkala untuk memastikan kenyamanan dan kemanan selama perjalanan</p>
             </div>
-
-            <div class="col-md-4 stats-box">
-                <h3>500+</h3>
-                <p>Pelanggan</p>
+            <div class="card2">
+                <h2>Harga terjangkau</h2>
+                <img src="../assets/img/money.png" alt="">
+                <p>Nikmati layanan rental dengan harga yang kompetitif dan transparan tanpa biaya tambahan yang tersembunyi</p>
             </div>
-
-            <div class="col-md-4 stats-box">
-                <h3>4.9 ★</h3>
-                <p>Rating</p>
+            <div class="card2">
+                <h2>Booking Mudah</h2>
+                <img src="../assets/img/booking.png" alt="">
+                <p>Proses pemesanan cepat dan praktis. pilih kendaraan, tentukan tanggal sewa lalu lakukan pemesanan.</p>
             </div>
-
+            <div class="card2">
+                <h2>Layanan terpercaya</h2>
+                <img src="../assets/img/CS.png" alt="">
+                <p>Didukung pelayanan yang ramah dan profoesional untuk membantu kebutuhan perjalanan anda kapan saja</p>
+            </div>
         </div>
-
     </section>
+    <!-- ABOUT END -->
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- KENDARAAN PAGE START -->
+    <section class="kendaraan" id="kendaraan">
+        <h2>KENDARAAN KAMI</h2>
+        <p>Pilih kendaraan yang sesuai dengan kebutuhan perjalanan anda, mulai dari mobil keluarga hingga kendaraan untuk keperluan bisnis.</p>
+        <div class="card-kendaraan-container">
+            <div class="card-kendaraan">
+                <h2>ALPHARD</h2>
+                <img src="../assets/img/alphard.png" alt="">
+                <p>MPV premium dengan kabin luas dan kenyamanan maksimal, cocok untuk perjalanan keluarga, tamu VIP, maupun kebutuhan bisnis.</p>
+            </div>
+            <div class="card-kendaraan">
+                <h2>Avanza</h2>
+                <img src="../assets/img/avanza.png" alt="">
+                <p>Kendaraan keluarga yang irit, nyaman, dan serbaguna. Cocok untuk perjalanan harian, wisata, maupun keperluan bersama keluarga.</p>
+            </div>
+            <div class="card-kendaraan">
+                <h2>Civic</h2>
+                <img src="../assets/img/civic.png" alt="">
+                <p>Sedan modern dengan desain sporty dan performa responsif, memberikan pengalaman berkendara yang nyaman dan berkelas</p>
+            </div>
+            <div class="card-kendaraan">
+                <h2>BMW</h2>
+                <img src="../assets/img/bmw.png" alt="" class="bmw">
+                <p>Mobil mewah dengan teknologi canggih, performa tinggi, dan kenyamanan premium untuk menunjang perjalanan yang eksklusif.</p>
+            </div>
+        </div>
+    </section>
+    <!-- KENDARAAN PAGE END -->
+    
+    <!-- BOOTSTRAP -->
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
+    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> -->
+    <!-- END -->
+
+    <!-- JavaScript start -->
+    <script src="../JavaScript/script.js"></script>
+    <!-- JavaScript end -->
 </body>
 </html>
