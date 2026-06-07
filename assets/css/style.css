@@ -253,7 +253,6 @@ body {
     padding: 100px 7%;
     color: white;
     text-align: center;
-    text-align: center;
 }
 
 .kendaraan h2 {
@@ -317,6 +316,84 @@ body {
 /* KENDARAAN END */
 
 /* FORM SEWA START */
+
+.sewa {
+    display: flex;
+    text-align: center;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #ffffff;
+    padding: 100px 7%;
+}
+
+.sewa h2 {
+    font-size: 40px;
+    text-align: center;
+}
+
+.sewa-container {
+    background-color: #F8FAFC;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 99px;
+    height: 633px;
+    width: 1056px;
+    border-radius: 30px;
+    box-shadow: 2px 2px 4px rgba(1, 1, 3, 0.5);
+}
+
+.sewa-container form {
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.sewa-container form  .inputGroup {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    background-color: #F8FAFC;
+    box-shadow: 2px 2px 4px rgba(1, 1, 3, 0.5);
+    border: 1px solid #eee;
+    padding-left: 2rem;
+    border-radius: 20px;
+}
+
+.sewa form .inputGroup input {
+    width: 100%;
+    height: 65px;
+    font-size: 16px;
+    background: none;
+    color: var(--textPrimary);
+    padding-left: 30px;
+}
+
+.sewa form .inputGroup select {
+    width: 100%;
+    font-size: 16px;
+    height: 65px;
+    background-color: none;
+    color: var(--textPrimary);
+    padding-left: 30px;
+    border-radius: 20px;
+}
+
+.sewa .btn-submit {
+    margin-top: 10px;
+    height: 52px;
+    width: 245px;
+    background-color: var(--btnSecondary);
+    color: var(--bgPrimary);
+    border-radius: 20px;
+    box-shadow: 2px 2px 4px rgba(1, 1, 3, 0.5);
+    transition: 0.3s;
+}
+
+.sewa .btn-submit:hover {
+    transform: translateY(-5px);
+}
 
 /* FORM SEWA END */
 
@@ -534,3 +611,4 @@ img {
     height: auto;
     display: block;
 }
+

@@ -1,19 +1,23 @@
+<?php 
+    include '../koneksi.php';
+
+    $query = mysqli_query($koneksi, "SELECT * FROM kendaraan");
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- BOOTSTRAP -->
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" 
-    rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" 
-    crossorigin="anonymous"> -->
-    <!-- End -->
-
     <!-- FONT START -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <!-- FONT END -->
+
+    <!-- FEATER ICON START -->
+    <script src="https://unpkg.com/feather-icons"></script>
+    <!-- FEATER ICON END -->
     
     <link rel="stylesheet" href="../assets/css/style.css" />
     <title>Rental Kendaraan</title>
@@ -26,7 +30,7 @@
                 <a href="#home" class="active">HOME</a>
                 <a href="#about">TENTANG</a>
                 <a href="#kendaraan">KENDARAAN</a>
-                <a href="">SEWA</a>
+                <a href="#sewa">SEWA</a>
             </div>
     </nav>
     <!-- NAVBAR END -->
@@ -100,12 +104,58 @@
         </div>
     </section>
     <!-- KENDARAAN PAGE END -->
-    
-    <!-- BOOTSTRAP -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" 
-    integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script> -->
-    <!-- END -->
 
+    <!-- FORM SEWA START-->
+    <section class="sewa" id="sewa"">
+        <h2>FORM SEWA</h2>
+        <div class="sewa-container">
+            <form action="submit.php" method="POST">
+                <div class="inputGroup">
+                    <i data-feather="user"></i>
+                    <input type="text" name="nama" placeholder="masukkan nama">
+                </div>
+                <div class="inputGroup">
+                    <i data-feather="map-pin"></i>
+                    <input type="text" name="alamat" placeholder="Masukkan alamat">
+                </div>
+                <div class="inputGroup">
+                    <i data-feather="smartphone"></i>
+                    <input type="number" name="no_hp" placeholder="masukkan no HP">
+                </div>
+                <div class="inputGroup">
+                    <i data-feather="truck"></i>
+                        <select name="id_kendaraan" id="" required>
+                            <option value="">Pilih kendaraan</option>
+
+                            <?php while($row = mysqli_fetch_assoc($query)) : ?>
+                                <option value="<?= $row['id_kendaraan']; ?>">
+                                    <?= $row['nama_kendaraan']; ?>
+                                    - Rp <?= number_format($row['harga_sewa'],0,',','.'); ?>
+                                </option>
+                            <?php endwhile; ?>
+                        </select>
+                </div>
+                <div class="inputGroup">
+                    <i data-feather="calendar"></i>
+                    <input type="date" name="tanggal_sewa" required placeholder="masukkan tanggal sewa">
+                </div>
+                <div class="inputGroup">
+                    <i data-feather="calendar"></i>
+                    <input type="date" name="tanggal_kembali" required placeholder="tanggal kembali">
+                </div>
+                <button type="submit" class="btn-submit">SUBMIT</button>
+            </form>
+        </div>
+    </section>
+    <!-- FORM SEWA END -->
+    
+
+
+
+    <!-- feather icons -->
+    <script> feather.replace(); </script>
+    <!-- end feather icon js -->
+    
     <!-- JavaScript start -->
     <script src="../JavaScript/script.js"></script>
     <!-- JavaScript end -->
