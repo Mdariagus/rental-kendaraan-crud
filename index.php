@@ -1,6 +1,5 @@
 <?php 
     include 'config/koneksi.php';
-
     $query = mysqli_query($koneksi, "SELECT * FROM kendaraan");
 ?>
 
@@ -32,7 +31,7 @@
                 <a href="#kendaraan">KENDARAAN</a>
             </div>
             <div class="btn-login">
-                <a href="coustemer/login/register.php"><i data-feather="user"></i> Login -></a>
+                <a href="costumer/login.php"><i data-feather="user"></i> Login -></a>
             </div>
     </nav>
     <!-- NAVBAR END -->
@@ -43,7 +42,7 @@
             <h1>SEWA MOBIL</h1>
             <h2>DENGAN SYARAT MUDAH</h2>
             <p>Temukan berbagai pilihan kendaraan yang nyaman, terawat, <br> dan siap menemani perjalanan anda</p>
-            <a href="#coustemer/login/register.php" class="cta">SEWA SEKARANG ></a>
+            <a href="costumer/login.php" class="cta">SEWA SEKARANG ></a>
             <div class="imgHero"><img src="assets/img/hero.png" alt="FOTO"></div>
         </main>
     </section>
