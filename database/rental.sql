@@ -17,6 +17,8 @@ CREATE TABLE admin (
 CREATE TABLE customer (
     id_customer INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(100) NOT NULL,
+    email VARCHAR(100), NOT NULL,
+    password VARCHAR (100) NOT NULL,
     alamat TEXT,
     no_hp VARCHAR(15)
 );
@@ -25,11 +27,12 @@ CREATE TABLE customer (
 -- TABEL KENDARAAN
 -- =========================
 CREATE TABLE kendaraan (
-    id_kendaraan INT AUTO_INCREMENT PRIMARY KEY,
+    id_kendaraan VARCHAR(10) PRIMARY KEY,
     nama_kendaraan VARCHAR(100) NOT NULL,
     merk VARCHAR(50) NOT NULL,
     plat_nomor VARCHAR(20) NOT NULL UNIQUE,
     tahun YEAR,
+    gambar VARCHAR(255),
     harga_sewa DECIMAL(10,2) NOT NULL,
     status ENUM('Tersedia','Disewa') DEFAULT 'Tersedia'
 );

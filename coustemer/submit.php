@@ -1,5 +1,5 @@
 <?php 
-  include '../koneksi.php';
+  include 'config/koneksi.php';
 
   $nama = $_POST['nama'];
   $alamat = $_POST['alamat'];

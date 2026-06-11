@@ -1,0 +1,165 @@
+:root {
+    /* BACKGROUND */
+    --bgPrimary: #D1D5DB;
+    --bgDark: #1E293B;
+    --bgTeks: #3B82F6;
+
+    /* Navigation */
+    --navBg: #0F172A;
+
+    /* Button */
+    --btnPrimary: #FF383c;
+    --btnSecondary: #F97316;
+
+    /* TEKS */
+    --textPrimary: #1f2937;
+    --textSecondary: #f97316;
+}
+
+/* all selector start */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    background-color: var(--bgPrimary);
+}
+
+/* CONTAINER */
+.register-container{
+    display: flex;
+    min-height: 100vh;
+}
+
+/* ========================= */
+/* LEFT SIDE */
+/* ========================= */
+.left-side{
+    width: 60%;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#192332, #283A54) ;
+}
+
+.left-side .bg-image{
+    width: 80%;
+    height: 80%;
+    object-fit: cover;
+}
+
+.left-side .overlay{
+    position: absolute;
+    top: 50%;
+    left: 80px;
+
+    transform: translateY(-50%);
+
+    color: white;
+    max-width: 450px;
+}
+
+.left-side .overlay h2{
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.left-side .overlay p{
+    font-size: 16px;
+    line-height: 1.7;
+}
+
+/* ========================= */
+/* RIGHT SIDE */
+/* ========================= */
+.right-side{
+    width: 40%;
+    background-color: white;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 40px;
+}
+
+.form-container{
+    width: 100%;
+    max-width: 400px;
+}
+
+.form-container h2{
+    font-size: 32px;
+    margin-bottom: 10px;
+    color: #1f2937;
+}
+
+.form-container p{
+    color: #6b7280;
+    margin-bottom: 30px;
+}
+
+/* ========================= */
+/* FORM */
+/* ========================= */
+.input-group{
+    margin-bottom: 15px;
+}
+
+.input-group input{
+    width: 100%;
+    padding: 14px 16px;
+
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+
+    font-size: 14px;
+}
+
+.input-group input:focus{
+    border-color: #3b82f6;
+}
+
+/* BUTTON */
+.btn-register{
+    width: 100%;
+
+    padding: 14px;
+
+  background: linear-gradient(#192332, #283A54) ;    color: white;
+
+    border-radius: 10px;
+    cursor: pointer;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    transition: 0.3s;
+}
+
+.btn-register:hover{
+  background: linear-gradient(#192332, #283A54) ;    color: white;
+}
+.btn-register:hover::after{
+  background: linear-gradient(#192332, #283A54) ;    color: white;
+}
+
+/* LOGIN LINK */
+.login-link{
+    margin-top: 20px;
+    text-align: center;
+}
+
+.login-link a{
+    color: #3b82f6;
+    font-weight: 600;
+}

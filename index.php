@@ -1,5 +1,5 @@
 <?php 
-    include '../koneksi.php';
+    include 'config/koneksi.php';
 
     $query = mysqli_query($koneksi, "SELECT * FROM kendaraan");
 ?>
@@ -19,7 +19,7 @@
     <script src="https://unpkg.com/feather-icons"></script>
     <!-- FEATER ICON END -->
     
-    <link rel="stylesheet" href="../assets/css/style.css" />
+    <link rel="stylesheet" href="assets/css/style.css" />
     <title>Rental Kendaraan</title>
 </head>
 <body>
@@ -30,7 +30,9 @@
                 <a href="#home" class="active">HOME</a>
                 <a href="#about">TENTANG</a>
                 <a href="#kendaraan">KENDARAAN</a>
-                <a href="#sewa">SEWA</a>
+            </div>
+            <div class="btn-login">
+                <a href="coustemer/login/register.php"><i data-feather="user"></i> Login -></a>
             </div>
     </nav>
     <!-- NAVBAR END -->
@@ -41,8 +43,8 @@
             <h1>SEWA MOBIL</h1>
             <h2>DENGAN SYARAT MUDAH</h2>
             <p>Temukan berbagai pilihan kendaraan yang nyaman, terawat, <br> dan siap menemani perjalanan anda</p>
-            <a href="#" class="cta">SEWA SEKARANG ></a>
-            <div class="imgHero"><img src="../assets/img/hero.png" alt="FOTO"></div>
+            <a href="#coustemer/login/register.php" class="cta">SEWA SEKARANG ></a>
+            <div class="imgHero"><img src="assets/img/hero.png" alt="FOTO"></div>
         </main>
     </section>
     <!-- HERO SECTION END -->
@@ -54,22 +56,22 @@
         <div class="card-container">
             <div class="card">
                 <h2>Armada berkualitas</h2>
-                <img src="../assets/img/1car.png" alt="card-card">
+                <img src="assets/img/1car.png" alt="card-card">
                 <p>Nikmati berbagai pilihan kendaraan yang selalu dirawat secara berkala untuk memastikan kenyamanan dan kemanan selama perjalanan</p>
             </div>
             <div class="card2">
                 <h2>Harga terjangkau</h2>
-                <img src="../assets/img/money.png" alt="">
+                <img src="assets/img/money.png" alt="">
                 <p>Nikmati layanan rental dengan harga yang kompetitif dan transparan tanpa biaya tambahan yang tersembunyi</p>
             </div>
             <div class="card2">
                 <h2>Booking Mudah</h2>
-                <img src="../assets/img/booking.png" alt="">
+                <img src="assets/img/booking.png" alt="">
                 <p>Proses pemesanan cepat dan praktis. pilih kendaraan, tentukan tanggal sewa lalu lakukan pemesanan.</p>
             </div>
             <div class="card2">
                 <h2>Layanan terpercaya</h2>
-                <img src="../assets/img/CS.png" alt="">
+                <img src="assets/img/CS.png" alt="">
                 <p>Didukung pelayanan yang ramah dan profoesional untuk membantu kebutuhan perjalanan anda kapan saja</p>
             </div>
         </div>
@@ -83,81 +85,34 @@
         <div class="card-kendaraan-container">
             <div class="card-kendaraan">
                 <h2>ALPHARD</h2>
-                <img src="../assets/img/alphard.png" alt="">
+                <img src="assets/img/alphard.png" alt="">
                 <p>MPV premium dengan kabin luas dan kenyamanan maksimal, cocok untuk perjalanan keluarga, tamu VIP, maupun kebutuhan bisnis.</p>
             </div>
             <div class="card-kendaraan">
                 <h2>Avanza</h2>
-                <img src="../assets/img/avanza.png" alt="">
+                <img src="assets/img/avanza.png" alt="">
                 <p>Kendaraan keluarga yang irit, nyaman, dan serbaguna. Cocok untuk perjalanan harian, wisata, maupun keperluan bersama keluarga.</p>
             </div>
             <div class="card-kendaraan">
                 <h2>Civic</h2>
-                <img src="../assets/img/civic.png" alt="">
+                <img src="assets/img/civic.png" alt="">
                 <p>Sedan modern dengan desain sporty dan performa responsif, memberikan pengalaman berkendara yang nyaman dan berkelas</p>
             </div>
             <div class="card-kendaraan">
                 <h2>BMW</h2>
-                <img src="../assets/img/bmw.png" alt="" class="bmw">
+                <img src="assets/img/bmw.png" alt="" class="bmw">
                 <p>Mobil mewah dengan teknologi canggih, performa tinggi, dan kenyamanan premium untuk menunjang perjalanan yang eksklusif.</p>
             </div>
         </div>
     </section>
     <!-- KENDARAAN PAGE END -->
 
-    <!-- FORM SEWA START-->
-    <section class="sewa" id="sewa"">
-        <h2>FORM SEWA</h2>
-        <div class="sewa-container">
-            <form action="submit.php" method="POST">
-                <div class="inputGroup">
-                    <i data-feather="user"></i>
-                    <input type="text" name="nama" placeholder="masukkan nama">
-                </div>
-                <div class="inputGroup">
-                    <i data-feather="map-pin"></i>
-                    <input type="text" name="alamat" placeholder="Masukkan alamat">
-                </div>
-                <div class="inputGroup">
-                    <i data-feather="smartphone"></i>
-                    <input type="number" name="no_hp" placeholder="masukkan no HP">
-                </div>
-                <div class="inputGroup">
-                    <i data-feather="truck"></i>
-                        <select name="id_kendaraan" id="" required>
-                            <option value="">Pilih kendaraan</option>
-
-                            <?php while($row = mysqli_fetch_assoc($query)) : ?>
-                                <option value="<?= $row['id_kendaraan']; ?>">
-                                    <?= $row['nama_kendaraan']; ?>
-                                    - Rp <?= number_format($row['harga_sewa'],0,',','.'); ?>
-                                </option>
-                            <?php endwhile; ?>
-                        </select>
-                </div>
-                <div class="inputGroup">
-                    <i data-feather="calendar"></i>
-                    <input type="date" name="tanggal_sewa" required placeholder="masukkan tanggal sewa">
-                </div>
-                <div class="inputGroup">
-                    <i data-feather="calendar"></i>
-                    <input type="date" name="tanggal_kembali" required placeholder="tanggal kembali">
-                </div>
-                <button type="submit" class="btn-submit">SUBMIT</button>
-            </form>
-        </div>
-    </section>
-    <!-- FORM SEWA END -->
-    
-
-
-
     <!-- feather icons -->
     <script> feather.replace(); </script>
     <!-- end feather icon js -->
     
     <!-- JavaScript start -->
-    <script src="../JavaScript/script.js"></script>
+    <script src="JavaScript/script.js"></script>
     <!-- JavaScript end -->
 </body>
 </html>
