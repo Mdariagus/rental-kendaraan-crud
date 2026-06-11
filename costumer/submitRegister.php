@@ -18,7 +18,7 @@
         } else {
             // Melakukan query INSERT untuk mendaftarkan customer baru
             $query_register = "INSERT INTO customer (nama, email, no_hp, alamat, password) 
-                               VALUES ('$nama', '$email', '$no_hp', '$alamat', '$password')";
+                            VALUES ('$nama', '$email', '$no_hp', '$alamat', '$password')";
             
             if (mysqli_query($koneksi, $query_register)) {
                 $pesan_sukses = "Akun berhasil dibuat! Silakan masuk ke halaman login.";

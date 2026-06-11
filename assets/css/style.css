@@ -77,7 +77,6 @@ body {
 .navbar-coustem .navbar-nav a:hover{
     color: var(--bgTeks);
     border-radius: 20px;
-    color: #ffffff;
 }
 
 .navbar-coustem .navbar-nav a::after{

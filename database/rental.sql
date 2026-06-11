@@ -17,7 +17,7 @@ CREATE TABLE admin (
 CREATE TABLE customer (
     id_customer INT AUTO_INCREMENT PRIMARY KEY,
     nama VARCHAR(100) NOT NULL,
-    email VARCHAR(100), NOT NULL,
+    email VARCHAR(100) NOT NULL,
     password VARCHAR (100) NOT NULL,
     alamat TEXT,
     no_hp VARCHAR(15)
@@ -34,7 +34,7 @@ CREATE TABLE kendaraan (
     tahun YEAR,
     gambar VARCHAR(255),
     harga_sewa DECIMAL(10,2) NOT NULL,
-    status ENUM('Tersedia','Disewa') DEFAULT 'Tersedia'
+    status ENUM('Tersedia','Disewa', 'Service') DEFAULT 'Tersedia'
 );
 
 -- =========================
@@ -44,7 +44,7 @@ CREATE TABLE transaksi (
     id_transaksi INT AUTO_INCREMENT PRIMARY KEY,
 
     id_customer INT NOT NULL,
-    id_kendaraan INT NOT NULL,
+    id_kendaraan VARCHAR(10) NOT NULL,
 
     tanggal_sewa DATE NOT NULL,
     tanggal_kembali DATE NOT NULL,
@@ -93,6 +93,7 @@ INSERT INTO admin (
 -- DATA KENDARAAN
 -- =========================
 INSERT INTO kendaraan (
+    id_kendaraan,
     nama_kendaraan,
     merk,
     plat_nomor,
