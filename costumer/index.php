@@ -36,7 +36,7 @@ if (!isset($_SESSION['customer_id'])) {
         <div class="navbar">
             <a href="#">LIST MOBIL</a>
             <a href="form_pengajuan.php">FORM PENGAJUAN</a>
-            <a href="">RIWAYAT</a>
+            <a href="riwayat.php">RIWAYAT</a>
         </div>
     </nav>
     <!-- NAVBAR END -->

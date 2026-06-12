@@ -36,8 +36,8 @@ if (!isset($_SESSION['customer_id'])) {
         </div>
         <div class="navbar">
             <a href="index.php">LIST MOBIL</a>
-            <a href="#">FORM PENGAJUAN</a>
-            <a href="">RIWAYAT</a>
+            <a href="form_pengajuan.php">FORM PENGAJUAN</a>
+            <a href="riwayat.php">RIWAYAT</a>
         </div>
     </nav>
     <!-- NAVBAR END -->
@@ -78,11 +78,12 @@ if (!isset($_SESSION['customer_id'])) {
         </select>
 
         <label>Jaminan</label>
-        <select name="jaminan" required>
+        <select name="jaminan" id="jaminan" required>
 
             <option value="">Pilih Jaminan</option>
             <option value="KTP">KTP</option>
             <option value="SIM">SIM</option>
+            <option value="PASSPORT">Passport</option>
 
         </select>
 
