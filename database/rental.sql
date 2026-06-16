@@ -41,7 +41,7 @@ CREATE TABLE kendaraan (
 -- TABEL TRANSAKSI
 -- =========================
 CREATE TABLE transaksi (
-    id_transaksi INT AUTO_INCREMENT PRIMARY KEY,
+    id_transaksi INT PRIMARY KEY,
 
     id_customer INT NOT NULL,
     id_kendaraan VARCHAR(10) NOT NULL,
@@ -50,6 +50,7 @@ CREATE TABLE transaksi (
     tanggal_kembali DATE NOT NULL,
 
     lama_sewa INT NOT NULL,
+    jaminan VARCHAR(10) NOT NULL,
 
     total_bayar DECIMAL(12,2) NOT NULL,
 

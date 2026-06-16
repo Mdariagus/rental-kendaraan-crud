@@ -77,7 +77,7 @@ include '../config/koneksi.php';
                 Rp <?= number_format($k['harga_sewa'],0,',','.'); ?> <span>/hari</span>
             </div>
         </div>
-        <a href="#" class="btn-sewa">
+        <a href="form_pengajuan.php" class="btn-sewa">
             Sewa Sekarang
         </a>
     </div>

@@ -17,6 +17,7 @@ if (!isset($_SESSION['customer_id'])) {
     $jaminan      = $_POST['jaminan'];
     $tgl_sewa     = $_POST['tgl_sewa'];
     $tgl_kembali  = $_POST['tgl_kembali'];
+    $harga_sewa  = $_POST['harga_sewa'];
 
     // 1. Ambil tanggal hari ini untuk validasi tanggal mundur
     $today = date('Y-m-d');
@@ -55,7 +56,7 @@ if (!isset($_SESSION['customer_id'])) {
                 // 5. Simpan transaksi baru dengan status default 'Menunggu'
                 // Menggunakan kolom 'jaminan_identitas' agar sesuai dengan skema database
                 $query_insert = "INSERT INTO transaksi (id_customer, id_kendaraan, tanggal_sewa, tanggal_kembali, lama_sewa, total_bayar, jaminan, status) 
-                                 VALUES ('$id_customer', '$id_kendaraan', '$tgl_sewa', '$tgl_kembali', '$lama_sewa', '$total_bayar', '$jaminan', 'Menunggu')";
+                                VALUES ('$id_customer', '$id_kendaraan', '$tgl_sewa', '$tgl_kembali', '$lama_sewa', '$total_bayar', '$jaminan', 'Menunggu')";
                 
                 if (mysqli_query($koneksi, $query_insert)) {
                     // Update status kendaraan menjadi 'Disewa' agar tidak bisa disewa ganda

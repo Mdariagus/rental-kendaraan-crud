@@ -42,6 +42,7 @@ if (!isset($_SESSION['customer_id'])) {
     </nav>
     <!-- NAVBAR END -->
 
+    <!-- FORM PENGAJUAN START -->
 <div class="form-container">
 
     <h1>Form Pengajuan</h1>
@@ -100,6 +101,8 @@ if (!isset($_SESSION['customer_id'])) {
     </form>
 
 </div>
+
+    <!-- FORM PENGAJUAN END -->
 
 <script src="../JavaScript/form_pengajuan.js"></script>
 

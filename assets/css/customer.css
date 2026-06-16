@@ -33,30 +33,32 @@ html {
 body {
     font-family: "Work Sans", sans-serif;
     background-color: var(--bgPrimary);
-    padding: 120px;
+        padding-top: 140px;
+    padding-left: 40px;
+    padding-right: 40px;
 }
 
 /* NAVBAR START */
 
 .navbar-container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1.4rem 7%;
-  background-color: var(--navBg);
-  position: fixed;
-  top: 27px;
-  left: 235px;
-  right: 172px;
-  z-index: 9999;
-  border-radius: 40px;
-  height: 88px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.4rem 7%;
+    background-color: var(--navBg);
+    position: fixed;
+    top: 27px;
+    left: 235px;
+    right: 172px;
+    z-index: 9999;
+    border-radius: 40px;
+    height: 88px;
 }
 
 .navbar-container .user-info {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
 }
 
 .navbar-container img {
@@ -273,3 +275,22 @@ button:hover{
     background:#142038;
 }
 /* FORM PENGAJUAN END */
+
+/* HISTORY PAGE START */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+th, td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #333;
+}
+
+thead th {
+    background: #f1f1f1;
+    font-weight: bold;
+}
+/* HISTORY END */
