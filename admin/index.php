@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../assets/css/Login.css" />
-  <title>LOGIN PAGE</title>
+  <title>ADMIN LOGIN PAGE</title>
 </head>
 <body>
     <main class="register-container">
@@ -15,12 +15,12 @@
         <img src="../assets/img/bgmain.png" alt="Background" class="bg-image">
 
         <div class="overlay">
-            <h2>WELCOME!</h2>
+            <h2>ADMIN PANEL!</h2>
 
             <p>
-                Daftarkan akun Anda dan nikmati kemudahan menyewa
-                kendaraan kapan saja dengan proses yang cepat,
-                aman, dan terpercaya.
+            Kelola data kendaraan, pelanggan, transaksi,
+            dan aktivitas penyewaan melalui dashboard
+            administrator.
             </p>
         </div>
 
@@ -32,10 +32,6 @@
         <div class="form-container">
 
             <h2>LOGIN ACCOUNT</h2>
-
-            <p>
-                Masukkan data akun Anda untuk masuk.
-            </p>
 
             <form action="cek_login.php" method="POST">
                 <div class="input-group">
