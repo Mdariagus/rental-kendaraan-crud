@@ -7,19 +7,19 @@ include '../config/koneksi.php';
 ================================*/
 
 // Jumlah Customer
-$qCustomer = mysqli_query($conn, "SELECT COUNT(*) as total FROM customer");
+$qCustomer = mysqli_query($koneksi, "SELECT COUNT(*) as total FROM customer");
 $totalCustomer = mysqli_fetch_assoc($qCustomer)['total'] ?? 0;
 
 // Jumlah Kendaraan
-$qKendaraan = mysqli_query($conn, "SELECT COUNT(*) as total FROM kendaraan");
+$qKendaraan = mysqli_query($koneksi, "SELECT COUNT(*) as total FROM kendaraan");
 $totalKendaraan = mysqli_fetch_assoc($qKendaraan)['total'] ?? 0;
 
 // Jumlah Pengajuan
-$qPengajuan = mysqli_query($conn, "SELECT COUNT(*) as total FROM pengajuan");
+$qPengajuan = mysqli_query($koneksi, "SELECT COUNT(*) as total FROM transaksi");
 $totalPengajuan = mysqli_fetch_assoc($qPengajuan)['total'] ?? 0;
 
 // Total Pendapatan
-$qPendapatan = mysqli_query($conn,"
+$qPendapatan = mysqli_query($koneksi,"
 SELECT SUM(total_bayar) as total
 FROM transaksi
 WHERE status='Selesai'
@@ -215,10 +215,15 @@ $totalPendapatan = mysqli_fetch_assoc($qPendapatan)['total'] ?? 0;
 
 <?php
 
-$data = mysqli_query($conn,"
-SELECT *
-FROM pengajuan
-ORDER BY id_pengajuan DESC
+$data = mysqli_query($koneksi,"
+SELECT
+    t.*,
+    c.nama AS customer_nama,
+    k.nama_kendaraan
+FROM transaksi t
+JOIN customer c ON t.id_customer = c.id_customer
+JOIN kendaraan k ON t.id_kendaraan = k.id_kendaraan
+ORDER BY t.total_bayar DESC
 LIMIT 5
 ");
 
@@ -262,19 +267,19 @@ Pengajuan Terbaru
 
 <td class="p-4">
 
-<?= $d['nama_customer']; ?>
+<?= $d['customer_nama']; ?>
 
 </td>
 
 <td class="text-center">
 
-<?= $d['kendaraan']; ?>
+<?= $d['nama_kendaraan']; ?>
 
 </td>
 
 <td class="text-center">
 
-<?= $d['tanggal']; ?>
+<?= $d['lama_sewa']; ?> hari
 
 </td>
 

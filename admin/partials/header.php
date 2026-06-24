@@ -4,8 +4,8 @@ if (session_status() == PHP_SESSION_NONE) {
 }
 
 // Cek login admin
-if (!isset($_SESSION['admin'])) {
-    header("Location: ../login.php");
+if (!isset($_SESSION['admin_username'])) {
+    header("Location: ../admin/index.php");
     exit;
 }
 ?>

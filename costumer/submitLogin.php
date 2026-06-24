@@ -4,8 +4,8 @@ session_start();
 
 include '../config/koneksi.php';
 
-    $email = $_POST['email'];
-    $password = $_POST['password'];
+    $email = $_POST['email'] ?? '';
+    $password = $_POST['password'] ?? '';
 
     // Validasi sederhana: pastikan input tidak kosong
     if (empty($email) || empty($password)) {

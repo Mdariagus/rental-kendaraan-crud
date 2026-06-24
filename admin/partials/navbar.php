@@ -34,7 +34,7 @@
 
                 <h4 class="font-semibold">
 
-                    <?= $_SESSION['admin']; ?>
+                    <?= $_SESSION['admin_username']; ?>
 
                 </h4>
 
